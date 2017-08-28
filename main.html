@@ -4,11 +4,23 @@
 	<title></title>
 </head>
 <body>
-<h1>Chapter 1.
+	<div id="app">
+<span v-bind:title="message">Chapter 1.
 WWQ - WWW - EEW - QWE - QWQ - QQQ - WWE - QQW - EEE - QQE.
 
 Chapter 2.
-WWW - WWQ - "SPACE" - EEW - R - "SPACE" - D - WQE - R - D </h1>
+WWW - WWQ - "SPACE" - EEW - R - "SPACE" - D - WQE - R - D </span>
+
+</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">		
+		var app = new Vue({
+		el : '#app' ,
+		data : {
+		 message: 'Sad'.toLocaleString()
+		}
+		});
+		</script>
 
 </body>
-</html>
+</html
