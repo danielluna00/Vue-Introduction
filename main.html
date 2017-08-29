@@ -2,14 +2,19 @@
 <html>
 <head>
 	<title></title>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
 </head>
 <body>
+<span v-bind:title="message">Vue Introduction.</span>
 	<div id="app">
-<span v-bind:title="message">Chapter 1.
-WWQ - WWW - EEW - QWE - QWQ - QQQ - WWE - QQW - EEE - QQE.
-
-Chapter 2.
-WWW - WWQ - "SPACE" - EEW - R - "SPACE" - D - WQE - R - D </span>
+	 <input v-model = "firstname" class="input is-success" type="text" placeholder="First Name" >
+	 <input v-model = "lastname" class="input is-danger" type="email" placeholder="Last Name ">
+	
+<span>Nafnið mitt er:</span>
+<span v-text = "firstname"></span>
+<span v-text = "lastname"></span>
 
 </div>
 		<script src="https://unpkg.com/vue"></script>
@@ -17,7 +22,8 @@ WWW - WWQ - "SPACE" - EEW - R - "SPACE" - D - WQE - R - D </span>
 		var app = new Vue({
 		el : '#app' ,
 		data : {
-		 message: 'Sad'.toLocaleString()
+		 firstname: ''.toLocaleString(),
+		 lastname:''.toLocaleString()
 		}
 		});
 		</script>
